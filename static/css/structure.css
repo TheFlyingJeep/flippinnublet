@@ -1,0 +1,195 @@
+* {
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Reminder to self to eventually split this CSS file into 2 or 3 files
+   One for the header, and then either one for the entire main section,
+   or one for the list and button and one for the description */
+
+:root {
+    --header: rgb(30, 30, 30);
+    --buthover: rgb(60, 60, 60);
+    --back: rgb(30, 30, 40);
+    --menu: rgb(10, 10, 15);
+    --marg: 5px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--back);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column {
+    flex-direction: column !important;
+}
+
+.just-space {
+    justify-content: space-evenly !important;
+}
+
+.just-space-betw {
+    justify-content: space-between !important;
+}
+
+.header {
+    width: 100%;
+    height: 15%;
+    background-color: var(--header);
+    border-bottom: solid gray 0.5px;
+}
+
+.head {
+    width: 100%;
+    height: 100%;
+}
+
+.titlebox {
+    height: 60%;
+    width: 100%;
+}
+
+.title {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3vw;
+    color: white;
+}
+
+.info {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: 1vw;
+}
+
+.options {
+    height: 40%;
+    width: 100%;
+    align-items: end;
+}
+
+.butholder {
+    height: 90%;
+    width: 7.5%;
+}
+
+.botborder {
+    width: 80%;
+    height: 5%;
+    background-color: var(--header);
+    border-bottom: solid rgb(160, 104, 0);
+    border-bottom-width: 0px;
+    z-index: 2;
+}
+
+.button {
+    width: 100%;
+    height: 50%;
+    background-color: var(--header);
+    border-radius: 10px;
+}
+
+.button:hover {
+    background-color: var(--buthover);
+    cursor: pointer;
+}
+
+.buttontext {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1vw;
+    color: white;
+}
+
+.main {
+    width: 100%;
+    height: 85%;
+    justify-content: center;
+}
+
+.sidebar {
+    position: relative;
+    height: 75%;
+    width: 20%;
+    background-color: var(--menu);
+    border: solid gray 1px;
+    border-radius: 10px;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    align-items: end !important;
+}
+
+.list {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    margin-left: 20px;
+    line-height: 300%;
+    list-style: circle outside;
+}
+
+.l-item {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: 1.5vw;
+}
+
+.navbut {
+    width: 60%;
+    height: 10%;
+    background-color: rgb(0, 190, 0);
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+.navbut:hover {
+    cursor: pointer;
+    background-color: rgb(0, 220, 0);
+}
+
+.gotext {
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2vw;
+    animation: none;
+}
+
+span.go {
+    margin-left: var(--marg) !important;
+}
+
+span.arrow {
+    margin-right: 7vw;
+    animation: none;
+}
+
+.navbut:hover > span.arrow{
+    animation: rightArrow 0.2s linear 0s 1 forwards;
+}
+
+@keyframes rightArrow {
+    from {
+        margin-right: 7vw;
+    }
+    to {
+        margin-right: var(--marg);
+    }
+}
+
+.projinfo {
+    width: 50%;
+    height: 75%;
+    background-color: var(--menu);
+    border: solid 1px gray;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}

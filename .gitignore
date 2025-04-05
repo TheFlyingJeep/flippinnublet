@@ -1,0 +1,10 @@
+.htaccess
+cgi-bin
+error_log
+.well-known
+games
+animations
+projects
+about
+images
+static/js/jquery.js
